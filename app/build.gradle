@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+    defaultConfig {
+        applicationId "com.example.arfirst"
+        minSdkVersion 25
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+
+sceneform.asset('sampledata/Couch.obj',
+        'default',
+        'sampledata/Couch.sfa',
+        'src/main/assets/Couch')
+
+sceneform.asset('sampledata/ArcticFox_Posed.obj',
+        'default',
+        'sampledata/ArcticFox_Posed.sfa',
+        'src/main/assets/ArcticFox_Posed')
+
+
+sceneform.asset('sampledata/bed_02.glb',
+        'default',
+        'sampledata/bed_02.sfa',
+        'src/main/assets/bed_02')
+
+sceneform.asset('sampledata/Armoire.obj',
+        'default',
+        'sampledata/Armoire.sfa',
+        'src/main/assets/Armoire')
+
+sceneform.asset('sampledata/Bed_01.obj',
+        'default',
+        'sampledata/Bed_01.sfa',
+        'src/main/assets/Bed_01')
+
+sceneform.asset('sampledata/book_cabinet.obj',
+        'default',
+        'sampledata/book_cabinet.sfa',
+        'src/main/assets/book_cabinet')
+
+sceneform.asset('sampledata/Credenza.obj',
+        'default',
+        'sampledata/Credenza.sfa',
+        'src/main/assets/Credenza')
+
+sceneform.asset('sampledata/Desk.obj',
+        'default',
+        'sampledata/Desk.sfa',
+        'src/main/assets/Desk')
+
+sceneform.asset('sampledata/Table_Small_Rectangular_01.obj',
+        'default',
+        'sampledata/Table_Small_Rectangular_01.sfa',
+        'src/main/assets/Table_Small_Rectangular_01')
+
+sceneform.asset('sampledata/Armchair_01.obj',
+        'default',
+        'sampledata/Armchair_01.sfa',
+        'src/main/assets/Armchair_01')
