@@ -85,3 +85,33 @@ sceneform.asset('sampledata/Armchair_01.obj',
         'default',
         'sampledata/Armchair_01.sfa',
         'src/main/assets/Armchair_01')
+
+sceneform.asset('sampledata/Bike.obj',
+        'default',
+        'sampledata/Bike.sfa',
+        'src/main/assets/Bike')
+
+sceneform.asset('sampledata/ComboWasherDryer_1291.obj',
+        'default',
+        'sampledata/ComboWasherDryer_1291.sfa',
+        'src/main/assets/ComboWasherDryer_1291')
+
+sceneform.asset('sampledata/Desk lamp.obj',
+        'default',
+        'sampledata/Desk lamp.sfa',
+        'src/main/assets/Desk lamp')
+
+sceneform.asset('sampledata/Laptop_01.obj',
+        'default',
+        'sampledata/Laptop_01.sfa',
+        'src/main/assets/Laptop_01')
+
+sceneform.asset('sampledata/Microwave.obj',
+        'default',
+        'sampledata/Microwave.sfa',
+        'src/main/assets/Microwave')
+
+sceneform.asset('sampledata/TV_01(1).obj',
+        'default',
+        'sampledata/TV_01(1).sfa',
+        'src/main/assets/TV_01(1)')

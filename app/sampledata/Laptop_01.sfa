@@ -1,0 +1,95 @@
+{
+  materials: [
+    {
+      name: 'Ambulance_01:blinn3SG',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.01,
+            0.01,
+            0.01,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'Ambulance_01:blinn6SG',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.34000000000000002,
+            0.34000000000000002,
+            0.34000000000000002,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'blinn11SG',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0,
+            0.33000000000000002,
+            0.78000000000000003,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/Laptop_01.obj',
+    name: 'Laptop_01',
+    recenter: 'root',
+    scale: 0.011698999999999999,
+  },
+  version: '0.54:2',
+}
