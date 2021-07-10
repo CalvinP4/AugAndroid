@@ -2,12 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.arfirst">
 
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <uses-feature
-        android:name="android.hardware.camera.ar"
-        android:required="true" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AugmentedScene"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".AugmentedScene" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,5 +23,11 @@
             android:name="com.google.ar.core"
             android:value="required" />
     </application>
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>
