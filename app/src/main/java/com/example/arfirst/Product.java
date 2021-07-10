@@ -1,18 +1,18 @@
 package com.example.arfirst;
 
 
-public class Flower {
+public class Product {
 
-    private String mFlowerName;
+    private String mProductName;
     private int mPhotoPath;
 
 
     public String getFlowerName() {
-        return mFlowerName;
+        return mProductName;
     }
 
     public void setFlowerName(String name) {
-        mFlowerName = name;
+        mProductName = name;
     }
 
     public int getPhotoPath() {

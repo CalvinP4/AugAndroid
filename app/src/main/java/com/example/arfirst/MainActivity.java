@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    ArrayList<Flower> mFlowerDataSet = new ArrayList<>();
+    ArrayList<Product> mProductDataSet = new ArrayList<>();
     //String[] fNames = {"A","B","C","D","E","F","A","B","C","D","E","F"};
     String[] chair_Names={"0","BARSTOOL","LOUNGECHAIR","WHITECHAIR","WALLCLOCK"};
     String[] sofa_Names={"0","MATTESOFA","GREYSOFA","BLUESOFA","DESK"};
@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         //ab.setDisplayHomeAsUpEnabled(true);
 
         //Prepare DataSet
-        mFlowerDataSet = prepareDataSet();
+        mProductDataSet = prepareDataSet();
         //Initialize Grid View for programming
         GridView gridview = (GridView) findViewById(R.id.gridView);
         //Connect DataSet to Adapter
-        FlowerAdapter flowerAdapter = new FlowerAdapter(this, mFlowerDataSet);
+        ProductAdapter productAdapter = new ProductAdapter(this, mProductDataSet);
         //Now Connect Adapter To GridView
-        gridview.setAdapter(flowerAdapter);
+        gridview.setAdapter(productAdapter);
         //Add Listener For Grid View Item Click
         gridview.setOnItemClickListener(this);
 
@@ -83,33 +83,33 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        AugmentedScene.addModel(mFlowerDataSet.get(position).getFlowerName()+".sfb");
+        AugmentedScene.addModel(mProductDataSet.get(position).getFlowerName()+".sfb");
         //Show Name Of The Flower
 //        Toast.makeText(MainActivity.this, mFlowerDataSet.get(position).getFlowerName(),
 //                Toast.LENGTH_SHORT).show();
     }
 
     //Creating Data Set By Adding 6 flower objects
-    private ArrayList<Flower> prepareDataSet() {
+    private ArrayList<Product> prepareDataSet() {
 
-        ArrayList<Flower> flowerData = new ArrayList<>();
+        ArrayList<Product> productData = new ArrayList<>();
 
-        Flower flower;
+        Product product;
         for(int i=1; i<5;i++){
-            flower = new Flower();
-            flower.setFlowerName(chair_Names[i]);
-            flower.setPhotoPath(getResources().getIdentifier("chair"+i, "drawable", getPackageName()));
-            flowerData.add(flower);
+            product = new Product();
+            product.setFlowerName(chair_Names[i]);
+            product.setPhotoPath(getResources().getIdentifier("chair"+i, "drawable", getPackageName()));
+            productData.add(product);
         }
         for(int i=1; i<5;i++){
-            flower = new Flower();
-            flower.setFlowerName(sofa_Names[i]);
-            flower.setPhotoPath(getResources().getIdentifier("sofa"+i, "drawable", getPackageName()));
-            flowerData.add(flower);
+            product = new Product();
+            product.setFlowerName(sofa_Names[i]);
+            product.setPhotoPath(getResources().getIdentifier("sofa"+i, "drawable", getPackageName()));
+            productData.add(product);
         }
 
 
-        return flowerData;
+        return productData;
 
     }
 }

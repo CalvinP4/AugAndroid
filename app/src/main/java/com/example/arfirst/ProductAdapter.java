@@ -14,25 +14,25 @@ import java.util.ArrayList;
 
 //This is a custom adapter. It has been extended from BaseAdapter because
 //we need to overrider the getView function for changing the layout of each Grid View Item
-public class FlowerAdapter extends BaseAdapter {
+public class ProductAdapter extends BaseAdapter {
 
-    private ArrayList<Flower> mFlowerData = new ArrayList<>();
+    private ArrayList<Product> mProductData = new ArrayList<>();
     private LayoutInflater mInflaterCatalogListItems;
 
-    public FlowerAdapter(Context context, ArrayList<Flower> flowerData) {
-        mFlowerData = flowerData;
+    public ProductAdapter(Context context, ArrayList<Product> productData) {
+        mProductData = productData;
         mInflaterCatalogListItems = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     //This function will determine how many items to be displayed
     @Override
     public int getCount() {
-        return mFlowerData.size();
+        return mProductData.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return mFlowerData.get(position);
+        return mProductData.get(position);
     }
 
     @Override
@@ -51,8 +51,8 @@ public class FlowerAdapter extends BaseAdapter {
             holder = new ViewHolder();
             convertView = mInflaterCatalogListItems.inflate(R.layout.adapter_flower,
                     null);
-            holder.sFlowerName = (TextView) convertView.findViewById(R.id.textView);
-            holder.sFlowerPhotoPath = (ImageView) convertView.findViewById(R.id.photoView);
+            holder.sProductName = (TextView) convertView.findViewById(R.id.textView);
+            holder.sProductPhotoPath = (ImageView) convertView.findViewById(R.id.photoView);
             convertView.setTag(holder);
 
         } else {
@@ -61,9 +61,9 @@ public class FlowerAdapter extends BaseAdapter {
 
 
         //Change the content here
-        if (mFlowerData.get(position) != null) {
-            holder.sFlowerName.setText(mFlowerData.get(position).getFlowerName());
-            holder.sFlowerPhotoPath.setImageResource(mFlowerData.get(position).getPhotoPath());
+        if (mProductData.get(position) != null) {
+            holder.sProductName.setText(mProductData.get(position).getFlowerName());
+            holder.sProductPhotoPath.setImageResource(mProductData.get(position).getPhotoPath());
         }
 
         return convertView;
@@ -71,8 +71,8 @@ public class FlowerAdapter extends BaseAdapter {
 
     //View Holder class used for reusing the same inflated view. It will decrease the inflation overhead @getView
     private static class ViewHolder {
-        TextView sFlowerName;
-        ImageView sFlowerPhotoPath;
+        TextView sProductName;
+        ImageView sProductPhotoPath;
 
     }
 
