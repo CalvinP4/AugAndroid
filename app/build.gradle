@@ -3,7 +3,6 @@ apply plugin: 'com.google.ar.sceneform.plugin'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.1"
     defaultConfig {
         applicationId "com.example.arfirst"
         minSdkVersion 25
@@ -40,26 +39,13 @@ sceneform.asset('sampledata/Couch.obj',
         'sampledata/Couch.sfa',
         'src/main/assets/Couch')
 
-sceneform.asset('sampledata/ArcticFox_Posed.obj',
-        'default',
-        'sampledata/ArcticFox_Posed.sfa',
-        'src/main/assets/ArcticFox_Posed')
 
-
-sceneform.asset('sampledata/bed_02.glb',
-        'default',
-        'sampledata/bed_02.sfa',
-        'src/main/assets/bed_02')
 
 sceneform.asset('sampledata/Armoire.obj',
         'default',
         'sampledata/Armoire.sfa',
         'src/main/assets/Armoire')
 
-sceneform.asset('sampledata/Bed_01.obj',
-        'default',
-        'sampledata/Bed_01.sfa',
-        'src/main/assets/Bed_01')
 
 sceneform.asset('sampledata/book_cabinet.obj',
         'default',
@@ -86,32 +72,42 @@ sceneform.asset('sampledata/Armchair_01.obj',
         'sampledata/Armchair_01.sfa',
         'src/main/assets/Armchair_01')
 
-sceneform.asset('sampledata/Bike.obj',
-        'default',
-        'sampledata/Bike.sfa',
-        'src/main/assets/Bike')
 
-sceneform.asset('sampledata/ComboWasherDryer_1291.obj',
-        'default',
-        'sampledata/ComboWasherDryer_1291.sfa',
-        'src/main/assets/ComboWasherDryer_1291')
 
-sceneform.asset('sampledata/Desk lamp.obj',
-        'default',
-        'sampledata/Desk lamp.sfa',
-        'src/main/assets/Desk lamp')
 
-sceneform.asset('sampledata/Laptop_01.obj',
+sceneform.asset('sampledata/CHAIR_01/Barstool.obj',
         'default',
-        'sampledata/Laptop_01.sfa',
-        'src/main/assets/Laptop_01')
+        'sampledata/CHAIR_01/Barstool.sfa',
+        'src/main/assets/Barstool')
 
-sceneform.asset('sampledata/Microwave.obj',
+sceneform.asset('sampledata/CHAIR_02/Edie Lounge Chair Turbosquid.obj',
         'default',
-        'sampledata/Microwave.sfa',
-        'src/main/assets/Microwave')
+        'sampledata/CHAIR_02/Edie Lounge Chair Turbosquid.sfa',
+        'src/main/assets/Edie Lounge Chair Turbosquid')
 
-sceneform.asset('sampledata/TV_01(1).obj',
+sceneform.asset('sampledata/CHAIR_03/jean_obj.obj',
         'default',
-        'sampledata/TV_01(1).sfa',
-        'src/main/assets/TV_01(1)')
+        'sampledata/CHAIR_03/jean_obj.sfa',
+        'src/main/assets/jean_obj')
+
+sceneform.asset('sampledata/SOFA_01/SOFA_01.obj',
+        'default',
+        'sampledata/SOFA_01/SOFA_01.sfa',
+        'src/main/assets/SOFA_01')
+
+sceneform.asset('sampledata/SOFA_02/SOFA_02.obj',
+        'default',
+        'sampledata/SOFA_02/SOFA_02.sfa',
+        'src/main/assets/SOFA_02')
+
+sceneform.asset('sampledata/SOFA_03/Saba_Livingston_Sofa.obj',
+        'default',
+        'sampledata/SOFA_03/Saba_Livingston_Sofa.sfa',
+        'src/main/assets/Saba_Livingston_Sofa')
+
+
+
+sceneform.asset('sampledata/obj/clock.obj',
+        'default',
+        'sampledata/obj/clock.sfa',
+        'src/main/assets/clock')

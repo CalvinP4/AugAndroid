@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import com.google.ar.core.Anchor;
 import com.google.ar.sceneform.AnchorNode;
+import com.google.ar.sceneform.Scene;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
@@ -17,10 +18,10 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class AugmentedScene extends AppCompatActivity {
-    public static ArrayList<String> furn = new ArrayList<>();
+    public static ArrayList<String> models = new ArrayList<>();
 
     private ArFragment arFragment;
-    private String[] models;
+    //private String[] models;
     private int currentModel = 0;
 
     @Override
@@ -39,9 +40,9 @@ public class AugmentedScene extends AppCompatActivity {
             Anchor anchor = hitResult.createAnchor();
 
 
-            if (currentModel < furn.size()){
+            if (currentModel < models.size()){
                 //build a model to be displayed
-                ModelRenderable.builder().setSource(this, Uri.parse(furn.get(currentModel++))).build()
+                ModelRenderable.builder().setSource(this, Uri.parse(models.get(currentModel++))).build()
                         .thenAccept(modelRenderable -> addModelToScene(anchor, modelRenderable))
                         .exceptionally(throwable -> {
                             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -55,7 +56,14 @@ public class AugmentedScene extends AppCompatActivity {
 
 
         }));
+
+
     }
+
+    public static void addModel(String modelName){
+        models.add(modelName);
+    }
+
 
     private void addModelToScene(Anchor anchor, ModelRenderable modelRenderable) {
         //create a new anchor node on top of anchor
@@ -68,7 +76,13 @@ public class AugmentedScene extends AppCompatActivity {
         // add model on top of transformable node
         transformableNode.setRenderable(modelRenderable);
 
+
         arFragment.getArSceneView().getScene().addChild(anchorNode);
         transformableNode.select();
     }
+
+    private void removeModelFromScene(){
+
+    }
+
 }
