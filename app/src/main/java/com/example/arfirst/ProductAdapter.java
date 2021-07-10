@@ -49,7 +49,7 @@ public class ProductAdapter extends BaseAdapter {
         if (convertView == null) {
 
             holder = new ViewHolder();
-            convertView = mInflaterCatalogListItems.inflate(R.layout.adapter_flower,
+            convertView = mInflaterCatalogListItems.inflate(R.layout.adapter_product,
                     null);
             holder.sProductName = (TextView) convertView.findViewById(R.id.textView);
             holder.sProductPhotoPath = (ImageView) convertView.findViewById(R.id.photoView);
